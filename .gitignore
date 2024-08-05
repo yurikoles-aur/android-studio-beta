@@ -1,5 +1,4 @@
-src
-*.log
-*pkg*
-*.zip
-*tar*
+*
+!PKGBUILD
+!.SRCINFO
+!.gitignore
