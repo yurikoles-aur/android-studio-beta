@@ -11,12 +11,11 @@ PKGEXT='.pkg.tar'
 _pkgname=android-studio
 pkgname="${_pkgname}-beta"
 pkgver=2024.1.2.11
-pkgrel=1
+pkgrel=2
 pkgdesc='The Official Android IDE (Beta branch)'
 arch=('i686' 'x86_64')
 url='https://developer.android.com/studio/preview'
 license=('APACHE')
-makedepends=('zip')
 depends=(
   'alsa-lib'
   'fontconfig'
@@ -31,6 +30,7 @@ depends=(
   'python'
   'which'
 )
+makedepends=('zip')
 optdepends=(
   'android-emulator'
   'android-ndk: to implement parts of your android app in native code'
@@ -51,6 +51,7 @@ optdepends=(
   'ncurses5-compat-libs: native gdb support'
   'usbutils'
 )
+provides=("android-studio=${pkgver}")
 options=('!strip')
 source=("https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${pkgver}/${_pkgname}-${pkgver}-linux.tar.gz"
         "${pkgname}.desktop"
