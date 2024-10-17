@@ -1,16 +1,16 @@
 # Maintainer: Yurii Kolesnykov <root@yurikoles.com>
-
+#
 # Based on aur/android-studio by Kordian Bruck <k@bruck.me>
 # Based on aur/android-studio-canary by tilal6991 <lalitmaganti@gmail.com>, vanpra <pranavmaganti@gmail.com>
 # Contributor: Tad Fisher <tadfisher at gmail dot com>
-
-# PRs are welcome here: https://github.com/yurikoles-aur/android-studio-beta
+#
+# Pull requests are welcome here:https://github.com/yurikoles-aur/android-studio-beta
 # SHA-256 Checksums and binary links can be found here: https://developer.android.com/studio/archive
 
 PKGEXT='.pkg.tar'
 _pkgname=android-studio
 pkgname="${_pkgname}-beta"
-pkgver=2024.2.1.9
+pkgver=2024.2.1.10
 pkgrel=1
 pkgdesc='The Official Android IDE (Beta branch)'
 arch=('i686' 'x86_64')
@@ -56,7 +56,7 @@ options=('!strip')
 source=("https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${pkgver}/${_pkgname}-${pkgver}-linux.tar.gz"
         "${pkgname}.desktop"
         "license.html")
-sha256sums=('d7ca6955e02fc71ea43413a348a7198db10c36df2484a9a884cab7244ad7ee96'
+sha256sums=('aec225c19e50d7a254a2cf772613607984f73521982773cfdaf98c5a72253e3f'
             'c4a15624eb258acbe119567b044f4a54be4ebb41f05e6f6cb4d941d130dc714f'
             '6c4ae36e7e336f833de7d6151a4e1bb1d0133affeba9cef86f1190e0637128d1')
 
