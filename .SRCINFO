@@ -1,6 +1,6 @@
 pkgbase = android-studio-beta
 	pkgdesc = The Official Android IDE (Beta branch)
-	pkgver = 2024.2.1.10
+	pkgver = 2024.2.1.11
 	pkgrel = 1
 	url = https://developer.android.com/studio/preview
 	arch = i686
@@ -37,12 +37,12 @@ pkgbase = android-studio-beta
 	optdepends = lib32-zlib: for aapt
 	optdepends = ncurses5-compat-libs: native gdb support
 	optdepends = usbutils
-	provides = android-studio=2024.2.1.10
+	provides = android-studio=2024.2.1.11
 	options = !strip
-	source = https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.2.1.10/android-studio-2024.2.1.10-linux.tar.gz
+	source = https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.2.1.11/android-studio-2024.2.1.11-linux.tar.gz
 	source = android-studio-beta.desktop
 	source = license.html
-	sha256sums = aec225c19e50d7a254a2cf772613607984f73521982773cfdaf98c5a72253e3f
+	sha256sums = 81f2fa5da72ab6f6afacca4a5327de5191e133ad02706e3ee440dc8658b8cdc3
 	sha256sums = c4a15624eb258acbe119567b044f4a54be4ebb41f05e6f6cb4d941d130dc714f
 	sha256sums = 6c4ae36e7e336f833de7d6151a4e1bb1d0133affeba9cef86f1190e0637128d1
 
