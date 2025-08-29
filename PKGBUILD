@@ -7,7 +7,7 @@
 # Pull requests are welcome here: https://github.com/yurikoles-aur/android-studio-beta
 # SHA-256 Checksums and binary links can be found here: https://developer.android.com/studio/archive
 
-PKGEXT='.pkg.tar'
+#PKGEXT='.pkg.tar'
 _pkgname=android-studio
 pkgname="${_pkgname}-beta"
 pkgver=2025.1.3.6
