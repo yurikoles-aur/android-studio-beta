@@ -11,7 +11,7 @@
 _pkgname=android-studio
 pkgname="${_pkgname}-beta"
 pkgver=2025.2.2.5
-pkgrel=1
+pkgrel=2
 pkgdesc='The Official Android IDE (Beta branch)'
 arch=('i686' 'x86_64')
 url='https://developer.android.com/studio/preview'
