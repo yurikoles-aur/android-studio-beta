@@ -10,12 +10,12 @@
 #PKGEXT='.pkg.tar'
 _pkgname=android-studio
 pkgname="${_pkgname}-beta"
-pkgver=2025.2.2.5
-pkgrel=2
+pkgver=2025.2.2.6
+pkgrel=1
 pkgdesc='The Official Android IDE (Beta branch)'
 arch=('i686' 'x86_64')
 url='https://developer.android.com/studio/preview'
-license=('APACHE')
+license=('Apache-2.0')
 depends=(
   'alsa-lib'
   'fontconfig'
@@ -56,7 +56,7 @@ options=('!strip')
 source=("https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${pkgver}/${_pkgname}-${pkgver}-linux.tar.gz"
         "${pkgname}.desktop"
         "license.html")
-sha256sums=('67a1d5d24c7fdbc727e48754c500962399a173c2081bae3ef5200ece3cf072e2'
+sha256sums=('722bbe4e8e4a72eb3c14f0f3d43e37003faa3aa7cf1da5b826c101afd7f1d8f1'
             'c4a15624eb258acbe119567b044f4a54be4ebb41f05e6f6cb4d941d130dc714f'
             '6c4ae36e7e336f833de7d6151a4e1bb1d0133affeba9cef86f1190e0637128d1')
 
