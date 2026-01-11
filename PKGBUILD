@@ -10,7 +10,7 @@
 #PKGEXT='.pkg.tar'
 _pkgname=android-studio
 pkgname="${_pkgname}-beta"
-pkgver=2025.2.3.7
+pkgver=2025.2.3.8
 pkgrel=1
 pkgdesc='The Official Android IDE (Beta branch)'
 arch=('i686' 'x86_64')
@@ -53,12 +53,12 @@ optdepends=(
 )
 provides=("android-studio=${pkgver}")
 options=('!strip')
-source=("https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${pkgver}/${_pkgname}-${pkgver}-linux.tar.gz"
-        "${pkgname}.desktop"
-        "license.html")
-sha256sums=('77905c01491857b3b6e70ca889f899c5f52c00d3f12dafd092e4fdbb5aaa7cff'
-            'c4a15624eb258acbe119567b044f4a54be4ebb41f05e6f6cb4d941d130dc714f'
-            '6c4ae36e7e336f833de7d6151a4e1bb1d0133affeba9cef86f1190e0637128d1')
+source=(
+  "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${pkgver}/${_pkgname}-${pkgver}-linux.tar.gz"
+  "${pkgname}.desktop"
+)
+sha256sums=('287bd6548c4dcf076097d91da970f90a9bf3e7cafca56b36551c8f57756b247d'
+            'c4a15624eb258acbe119567b044f4a54be4ebb41f05e6f6cb4d941d130dc714f')
 
 if [ "${CARCH}" = "i686" ]; then
   depends+=('java-environment')
@@ -85,7 +85,6 @@ package() {
 
   # Copy licenses
   install -Dm644 LICENSE.txt "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.txt"
-  install -Dm644 "${srcdir}/license.html" "${pkgdir}/usr/share/licenses/${pkgname}/license.html"
 
   # Add the icon and desktop file.
   install -Dm644 bin/studio.png "${pkgdir}/usr/share/pixmaps/${pkgname}.png"
