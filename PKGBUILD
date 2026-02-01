@@ -10,7 +10,8 @@
 #PKGEXT='.pkg.tar'
 _pkgname=android-studio
 pkgname="${_pkgname}-beta"
-pkgver=2025.2.3.9
+pkgver=2025.3.1.6
+_subver='panda1-rc1'
 pkgrel=1
 pkgdesc='The Official Android IDE (Beta branch)'
 arch=('i686' 'x86_64')
@@ -54,10 +55,10 @@ optdepends=(
 provides=("android-studio=${pkgver}")
 options=('!strip')
 source=(
-  "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${pkgver}/${_pkgname}-${pkgver}-linux.tar.gz"
+  "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${pkgver}/${_pkgname}-${_subver}-linux.tar.gz"
   "${pkgname}.desktop"
 )
-sha256sums=('986ea6cacb36da723f2c8550cccd7d8cd3e8b8b7bb2446d3a8bf39bbaf91abc1'
+sha256sums=('e26eab3ad49a6f3b75f69c3c62bf76e15875f383e5a48b39c69c4f6cef1ce267'
             'c4a15624eb258acbe119567b044f4a54be4ebb41f05e6f6cb4d941d130dc714f')
 
 if [ "${CARCH}" = "i686" ]; then
@@ -80,7 +81,7 @@ package() {
 
   # Install the application
   install -d "${pkgdir}"/{opt/"${pkgname}",usr/bin}
-  cp -a . "${pkgdir}/opt/${pkgname}/"
+  cp -r . "${pkgdir}/opt/${pkgname}/"
   ln -s "/opt/${pkgname}/bin/studio.sh" "${pkgdir}/usr/bin/${pkgname}"
 
   # Copy licenses
