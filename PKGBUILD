@@ -10,8 +10,8 @@
 #PKGEXT='.pkg.tar'
 _pkgname=android-studio
 pkgname="${_pkgname}-beta"
-pkgver=2025.3.1.6
-_subver='panda1-rc1'
+pkgver=2025.3.1.8
+_subver='panda1-patch1'
 pkgrel=1
 pkgdesc='The Official Android IDE (Beta branch)'
 arch=('i686' 'x86_64')
@@ -58,7 +58,7 @@ source=(
   "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${pkgver}/${_pkgname}-${_subver}-linux.tar.gz"
   "${pkgname}.desktop"
 )
-sha256sums=('e26eab3ad49a6f3b75f69c3c62bf76e15875f383e5a48b39c69c4f6cef1ce267'
+sha256sums=('678b8495f6368938927a8c8cc1a82484dd47e3640b77ec8b9983dc95722cda42'
             'c4a15624eb258acbe119567b044f4a54be4ebb41f05e6f6cb4d941d130dc714f')
 
 if [ "${CARCH}" = "i686" ]; then
