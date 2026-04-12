@@ -10,12 +10,13 @@
 #PKGEXT='.pkg.tar'
 _pkgname=android-studio
 pkgname="${_pkgname}-beta"
-pkgver=2025.1.3.6
+pkgver=2025.3.1.8
+_subver='panda1-patch1'
 pkgrel=1
 pkgdesc='The Official Android IDE (Beta branch)'
 arch=('i686' 'x86_64')
 url='https://developer.android.com/studio/preview'
-license=('APACHE')
+license=('Apache-2.0')
 depends=(
   'alsa-lib'
   'fontconfig'
@@ -53,12 +54,12 @@ optdepends=(
 )
 provides=("android-studio=${pkgver}")
 options=('!strip')
-source=("https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${pkgver}/${_pkgname}-${pkgver}-linux.tar.gz"
-        "${pkgname}.desktop"
-        "license.html")
-sha256sums=('4bc28afc419ebf4bf4ddf572c08903e989b72eb72218a5c9568af3c99d658dd4'
-            'c4a15624eb258acbe119567b044f4a54be4ebb41f05e6f6cb4d941d130dc714f'
-            '6c4ae36e7e336f833de7d6151a4e1bb1d0133affeba9cef86f1190e0637128d1')
+source=(
+  "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${pkgver}/${_pkgname}-${_subver}-linux.tar.gz"
+  "${pkgname}.desktop"
+)
+sha256sums=('678b8495f6368938927a8c8cc1a82484dd47e3640b77ec8b9983dc95722cda42'
+            'c4a15624eb258acbe119567b044f4a54be4ebb41f05e6f6cb4d941d130dc714f')
 
 if [ "${CARCH}" = "i686" ]; then
   depends+=('java-environment')
@@ -80,12 +81,11 @@ package() {
 
   # Install the application
   install -d "${pkgdir}"/{opt/"${pkgname}",usr/bin}
-  cp -a . "${pkgdir}/opt/${pkgname}/"
+  cp -r . "${pkgdir}/opt/${pkgname}/"
   ln -s "/opt/${pkgname}/bin/studio.sh" "${pkgdir}/usr/bin/${pkgname}"
 
   # Copy licenses
   install -Dm644 LICENSE.txt "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.txt"
-  install -Dm644 "${srcdir}/license.html" "${pkgdir}/usr/share/licenses/${pkgname}/license.html"
 
   # Add the icon and desktop file.
   install -Dm644 bin/studio.png "${pkgdir}/usr/share/pixmaps/${pkgname}.png"
