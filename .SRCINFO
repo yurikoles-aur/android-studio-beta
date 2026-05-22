@@ -1,6 +1,6 @@
 pkgbase = android-studio-beta
 	pkgdesc = The Official Android IDE (Beta branch)
-	pkgver = 2025.3.4.7
+	pkgver = 2026.1.1.6
 	pkgrel = 1
 	url = https://developer.android.com/studio/preview
 	arch = i686
@@ -37,11 +37,11 @@ pkgbase = android-studio-beta
 	optdepends = lib32-zlib: for aapt
 	optdepends = ncurses5-compat-libs: native gdb support
 	optdepends = usbutils
-	provides = android-studio=2025.3.4.7
+	provides = android-studio=2026.1.1.6
 	options = !strip
-	source = https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2025.3.4.7/android-studio-panda4-patch1-linux.tar.gz
+	source = https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2026.1.1.6/android-studio-quail1-rc1-linux.tar.gz
 	source = android-studio-beta.desktop
-	sha256sums = aae8f332f124afd23ca495dc770915a456da7480c8f859e01535ad42fcb4ca06
+	sha256sums = 6fa3d58014d38c8826e81235ef544bed3e86243f40a674d618e4eabedef4dcf4
 	sha256sums = c4a15624eb258acbe119567b044f4a54be4ebb41f05e6f6cb4d941d130dc714f
 
 pkgname = android-studio-beta
