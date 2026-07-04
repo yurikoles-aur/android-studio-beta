@@ -7,11 +7,11 @@
 # Pull requests are welcome here: https://github.com/yurikoles-aur/android-studio-beta
 # SHA-256 Checksums and binary links can be found here: https://developer.android.com/studio/archive
 
-#PKGEXT='.pkg.tar'
+PKGEXT='.pkg.tar'
 _pkgname=android-studio
 pkgname="${_pkgname}-beta"
-pkgver=2026.1.1.6
-_subver='quail1-rc1'
+pkgver=2026.1.2.8
+_subver='quail2-rc1'
 pkgrel=1
 pkgdesc='The Official Android IDE (Beta branch)'
 arch=('i686' 'x86_64')
@@ -58,7 +58,7 @@ source=(
   "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/${pkgver}/${_pkgname}-${_subver}-linux.tar.gz"
   "${pkgname}.desktop"
 )
-sha256sums=('6fa3d58014d38c8826e81235ef544bed3e86243f40a674d618e4eabedef4dcf4'
+sha256sums=('b53303df08048345bb5ac25bfe159731dcea3430f4e2e27b8a60338161bd2667'
             'c4a15624eb258acbe119567b044f4a54be4ebb41f05e6f6cb4d941d130dc714f')
 
 if [ "${CARCH}" = "i686" ]; then
